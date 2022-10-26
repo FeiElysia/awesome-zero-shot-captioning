@@ -1,6 +1,9 @@
-# zero-few-shot-captioning
+# Zero/Few-Shot Captioning
 
-a reading list for zero/few-shot captioning
+While Vision-Language Model have achieved impressive performance on various of multimodal tasks, image captioning is still an open question to be solved, especially when we deploy image captioning model to the real world where the data distribution may deviate from training datasets completely. Zero/Few-shot captioning is a promising way to bridge this gap. Here is a curated reading list for zero/few-shot captioning. As works in this field is deficient, we have to contain some works which do not elaborately design for zero/few-shot captioning but test zero/few-shot performance in image captioning, works training with very little data and works for video captioning to enlarge this reading list. we are also thinking about whether to add some influential works about unsupervised image captioning and works concentrating on captioning of novel objects. Feel free to comment or drop us a line if you have any suggestion.
+
+Note that instead of following the timeline of papers accepted by conference or journal, we curate these papers following the time when the initial version of papers are submitted on ArXiv.
+
 
 ## Reading List
 
@@ -36,7 +39,7 @@ a reading list for zero/few-shot captioning
 
    `arXiv preprint`
    
-   `free-form visual data (i.e., image or video)`  `frozen LM conditioned by visual representations`  `in-context learning`
+   `free-form visual inputs`  `frozen LM conditioned by visual representations`  `in-context learning`
 
 5. [CM3: A Causal Masked Multimodal Model of the Internet](https://arxiv.org/abs/2201.07520)
 
@@ -44,7 +47,7 @@ a reading list for zero/few-shot captioning
 
    `arXiv preprint`
    
-   `causally masked objective`  `training on HTML data`
+   `causally masked objective`  `large-scale HTML data`
    
 6. [Zero-Shot Video Captioning with Evolving Pseudo-Tokens (vedio captioning)](https://arxiv.org/abs/2207.11100)
 
@@ -54,10 +57,44 @@ a reading list for zero/few-shot captioning
    
    `pseudo-tokens`  `iterative generation`
    
-x. []()
+## 2021
 
-   **
+1. [Uni-Perceiver: Pre-training Unified Architecture for Generic Perception for Zero-shot and Few-shot Tasks]()
 
-   `` [[code]()]
+   *Xizhou Zhu, Jinguo Zhu, Hao Li, Xiaoshi Wu, Xiaogang Wang, Hongsheng Li, Xiaohua Wang, Jifeng Dai*
+
+   `CVPR 2022`
    
-   ``
+   `unified model`  `modal-agnostic inputs`
+   
+2. [ZeroCap: Zero-Shot Image-to-Text Generation for Visual-Semantic Arithmetic](https://arxiv.org/abs/2111.14447)
+
+   *Yoad Tewel, Yoav Shalev, Idan Schwartz, Lior Wolf*
+
+   `CVPR 2022` [[code](https://github.com/YoadTew/zero-shot-image-to-text)]
+   
+   `training-free`  `image-guided context cache adjusting during inference`
+   
+3. [Scaling Up Vision-Language Pre-training for Image Captioning]()
+
+   *Xiaowei Hu, Zhe Gan, Jianfeng Wang, Zhengyuan Yang, Zicheng Liu, Yumao Lu, Lijuan Wang*
+
+   `arXiv preprint`
+   
+   `scaling up model`  `scaling up pre-training datasets`  `testing zero-shot performance`
+   
+4. [SimVLM: Simple Visual Language Model Pretraining with Weak Supervision]()
+
+   *Zirui Wang, Jiahui Yu, Adams Wei Yu, Zihang Dai, Yulia Tsvetkov, Yuan Cao*
+
+   `ICLR 2022`
+   
+   `weak supervision`  `pre-training end-to-end`  `testing zero-shot performance`
+   
+5. [VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning](https://arxiv.org/abs/2102.10407)
+
+   *Jun Chen, Han Guo, Kai Yi, Boyang Li, Mohamed Elhoseiny*
+
+   `CVPR 2022` [[code](https://github.com/Vision-CAIR/VisualGPT)]
+   
+   `data-efficient`
