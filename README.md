@@ -59,7 +59,7 @@ Note that instead of following the timeline of papers accepted by conference or 
    
 ## 2021
 
-1. [Uni-Perceiver: Pre-training Unified Architecture for Generic Perception for Zero-shot and Few-shot Tasks]()
+1. [Uni-Perceiver: Pre-training Unified Architecture for Generic Perception for Zero-shot and Few-shot Tasks](https://arxiv.org/abs/2112.01522)
 
    *Xizhou Zhu, Jinguo Zhu, Hao Li, Xiaoshi Wu, Xiaogang Wang, Hongsheng Li, Xiaohua Wang, Jifeng Dai*
 
@@ -75,7 +75,7 @@ Note that instead of following the timeline of papers accepted by conference or 
    
    `training-free`  `image-guided context cache adjusting during inference`
    
-3. [Scaling Up Vision-Language Pre-training for Image Captioning]()
+3. [Scaling Up Vision-Language Pre-training for Image Captioning](https://arxiv.org/abs/2111.12233)
 
    *Xiaowei Hu, Zhe Gan, Jianfeng Wang, Zhengyuan Yang, Zicheng Liu, Yumao Lu, Lijuan Wang*
 
@@ -83,7 +83,7 @@ Note that instead of following the timeline of papers accepted by conference or 
    
    `scaling up model`  `scaling up pre-training datasets`  `testing zero-shot performance`
    
-4. [SimVLM: Simple Visual Language Model Pretraining with Weak Supervision]()
+4. [SimVLM: Simple Visual Language Model Pretraining with Weak Supervision](https://arxiv.org/abs/2108.10904)
 
    *Zirui Wang, Jiahui Yu, Adams Wei Yu, Zihang Dai, Yulia Tsvetkov, Yuan Cao*
 
@@ -98,3 +98,46 @@ Note that instead of following the timeline of papers accepted by conference or 
    `CVPR 2022` [[code](https://github.com/Vision-CAIR/VisualGPT)]
    
    `data-efficient`
+
+
+# Unsupervised image Captioning
+
+The key pretext task in unsupervised image captioning is how to generate aligned pseudo-caption for each image. Early works focus on leveraging visual concept to obtain relevant image captions. They usually retrieve relevant sentence containing visual concept directly from text corpus or train language model conditioned by visual concept from scratch (2018-1, 2019-2). There are at least two problems with this method. One is the mismatch between image and pseudo-caption as visual concept only containing entity will lead to ignore the abuse of verb, adjunct and etc.. Another is that image captioning model will overfit to training datasets of visual concept detector which will underperform the zero/few-shot performance of captioning model. Despite the use of visual concept, Honda etc. propose the generation of each word in sentence should consider the influence from image which alleviates the mismatch between image and pseudo-caption (see 2021-1). It sheds light on zero/few-shot decode metric (e.g., MAGIC). Another method leverages adversarial networks, training with scarce image-caption pairs, to retrieve pseudo-caption from text corpus, which get rid of visual concept detector.
+
+## 2021
+
+1. [Removing Word-Level Spurious Alignment between Images and Pseudo-Captions in Unsupervised Image Captioning](https://arxiv.org/abs/2104.13872)
+
+   *Ukyo Honda, Yoshitaka Ushiku, Atsushi Hashimoto, Taro Watanabe, Yuji Matsumoto*
+
+   `EACL 2021`  [[code]( https://github.com/ukyh/RemovingSpuriousAlignment)]
+   
+   `word-level correspondence`
+   
+## 2019
+
+1. [Image Captioning with Very Scarce Supervised Data: Adversarial Semi-Supervised Learning Approach](https://arxiv.org/abs/1909.02201)
+
+   *Dong-Jin Kim, Jinsoo Choi, Tae-Hyun Oh, In So Kweon*
+
+   `EMNLP 2019`
+   
+   `adversarial training`  `semi-supervised learning`
+   
+2. [Towards Unsupervised Image Captioning with Shared Multimodal Embeddings](https://arxiv.org/abs/1908.09317)
+
+   *Iro Laina, Christian Rupprecht, Nassir Navab*
+
+   `ICCV 2019`
+   
+   `adversarial training`  `joint embedding space`
+   
+## 2018
+   
+1. [Unsupervised Image Captioning](https://arxiv.org/abs/1811.10787)
+
+   *Yang Feng, Lin Ma, Wei Liu, Jiebo Luo*
+
+   `CVPR 2019`
+   
+   `adversarial training`  `visual concept distillation`  `bi-directional reconstruction`
