@@ -1,143 +1,88 @@
-# Zero/Few-Shot Captioning
+# Awesome Zero-shot Captioning [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-While Vision-Language Model have achieved impressive performance on various of multimodal tasks, image captioning is still an open question to be solved, especially when we deploy image captioning model to the real world where the data distribution may deviate from training datasets completely. Zero/Few-shot captioning is a promising way to bridge this gap. Here is a curated reading list for zero/few-shot captioning. As works in this field is deficient, we have to contain some works which do not elaborately design for zero/few-shot captioning but test zero/few-shot performance in image captioning, works training with very little data and works for video captioning to enlarge this reading list. we are also thinking about whether to add some influential works about unsupervised image captioning and works concentrating on captioning of novel objects. Feel free to comment or drop us a line if you have any suggestion.
+A curated list of zero-shot captioning papers, including image-to-text generation, video-to-text generation. Maintained by Junjie Fei (junjiefei@outlook.com). Most recently updated on 2023/08/26.
 
-Note that instead of following the timeline of papers accepted by conference or journal, we curate these papers following the time when the initial version of papers are submitted on ArXiv.
+## Image-to-Text Generation
 
+### 2023
 
-## Reading List
+- **[Transferable Decoding with Visual Entities for Zero-Shot Image Captioning](https://arxiv.org/abs/2307.16525)** [![Star](https://img.shields.io/github/stars/haotian-liu/LLaVA.svg?style=social&label=Star)](https://github.com/FeiElysia/ViECap)
 
-## 2022
+```ICCV 2023``` [[paper]](https://arxiv.org/abs/2307.16525) [[code]](https://github.com/FeiElysia/ViECap)
 
-1. [MAPL: Parameter-Efficient Adaptation of Unimodal Pre-Trained Models for Vision-Language Few-Shot Prompting](https://arxiv.org/abs/2210.07179)
+- **[ConZIC: Controllable Zero-Shot Image Captioning by Sampling-Based Polishing](https://openaccess.thecvf.com/content/CVPR2023/html/Zeng_ConZIC_Controllable_Zero-Shot_Image_Captioning_by_Sampling-Based_Polishing_CVPR_2023_paper.html)** [![Star](https://img.shields.io/github/stars/haotian-liu/LLaVA.svg?style=social&label=Star)](https://github.com/joeyz0z/ConZIC)
 
-   *Oscar Mañas, Pau Rodriguez, Saba Ahmadi, Aida Nematzadeh, Yash Goyal, Aishwarya Agrawal*
+```CVPR 2023``` [[paper]](https://openaccess.thecvf.com/content/CVPR2023/html/Zeng_ConZIC_Controllable_Zero-Shot_Image_Captioning_by_Sampling-Based_Polishing_CVPR_2023_paper.html) [[code]](https://github.com/joeyz0z/ConZIC) [[demo]](https://huggingface.co/spaces/jiaqingj/ConZIC)
 
-   `arXiv preprint`
-   
-   `mapping network`  `parameter-efficient`
+- **[DeCap: Decoding CLIP Latents for Zero-Shot Captioning via Text-Only Training](https://arxiv.org/abs/2303.03032)** [![Star](https://img.shields.io/github/stars/haotian-liu/LLaVA.svg?style=social&label=Star)](https://github.com/dhg-wei/DeCap)
 
-2. [Socratic Models: Composing Zero-Shot Multimodal Reasoning with Language](https://arxiv.org/abs/2204.00598)
+```ICLR 2023``` [[paper]](https://arxiv.org/abs/2303.03032) [[code]](https://github.com/dhg-wei/DeCap)
 
-   *Andy Zeng, Maria Attarian, Brian Ichter, Krzysztof Choromanski, Adrian Wong, Stefan Welker, Federico Tombari, Aveek Purohit, Michael Ryoo, Vikas Sindhwani, Johnny Lee, Vincent Vanhoucke, Pete Florence*
+- **[MultiCapCLIP: Auto-Encoding Prompts for Zero-Shot Multilingual Visual Captioning](https://aclanthology.org/2023.acl-long.664/)** [![Star](https://img.shields.io/github/stars/haotian-liu/LLaVA.svg?style=social&label=Star)](https://github.com/yangbang18/MultiCapCLIP)
 
-   `arXiv preprint` [[code](https://github.com/google-research/google-research/tree/master/socraticmodels)]
-   
-   `training-free`  `intermodule communication`
+```ACL 2023``` [[paper]](https://aclanthology.org/2023.acl-long.664/) [[code]](https://github.com/yangbang18/MultiCapCLIP)
 
-3. [Language Models Can See: Plugging Visual Controls in Text Generation](https://arxiv.org/abs/2205.02655)
+- **[Re-ViLM: Retrieval-Augmented Visual Language Model for Zero and Few-Shot Image Captioning](https://arxiv.org/abs/2302.04858)**
 
-   *Yixuan Su, Tian Lan, Yahui Liu, Fangyu Liu, Dani Yogatama, Yan Wang, Lingpeng Kong, Nigel Collier*
+```arXiv 2023``` [[paper]](https://arxiv.org/abs/2302.04858)
 
-   `arXiv preprint` [[code](https://github.com/yxuansu/MAGIC)]
-   
-   `training-free`  `new decoding scheme`
-   
-4. [Flamingo: a Visual Language Model for Few-Shot Learning](https://arxiv.org/abs/2204.14198)
+- **[ZeroGen: Zero-shot Multimodal Controllable Text Generation with Multiple Oracles](https://arxiv.org/abs/2306.16649)** [![Star](https://img.shields.io/github/stars/haotian-liu/LLaVA.svg?style=social&label=Star)](https://github.com/ImKeTT/ZeroGen)
 
-   *Jean-Baptiste Alayrac, Jeff Donahue, Pauline Luc, Antoine Miech, Iain Barr, Yana Hasson, Karel Lenc, Arthur Mensch, Katie Millican, Malcolm Reynolds, Roman Ring, Eliza Rutherford, Serkan Cabi, Tengda Han, Zhitao Gong, Sina Samangooei, Marianne Monteiro, Jacob Menick, Sebastian Borgeaud, Andrew Brock, Aida Nematzadeh, Sahand Sharifzadeh, Mikolaj Binkowski, Ricardo Barreira, Oriol Vinyals, Andrew Zisserman, Karen Simonyan*
+```arXiv 2023``` [[paper]](https://arxiv.org/abs/2306.16649) [[code]](https://github.com/ImKeTT/ZeroGen)
 
-   `arXiv preprint`
-   
-   `free-form visual inputs`  `frozen LM conditioned by visual representations`  `in-context learning`
+- **[Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models](https://arxiv.org/abs/2305.18010)**
 
-5. [CM3: A Causal Masked Multimodal Model of the Internet](https://arxiv.org/abs/2201.07520)
+```arXiv 2023``` [[paper]](https://arxiv.org/abs/2305.18010) [[project page]](https://mzhaoshuai.github.io/RLCF/)
 
-   *Armen Aghajanyan, Bernie Huang, Candace Ross, Vladimir Karpukhin, Hu Xu, Naman Goyal, Dmytro Okhonko, Mandar Joshi, Gargi Ghosh, Mike Lewis, Luke Zettlemoyer*
+- **[CoBIT: A Contrastive Bi-directional Image-Text Generation Model](https://arxiv.org/abs/2303.13455)**
 
-   `arXiv preprint`
-   
-   `causally masked objective`  `large-scale HTML data`
-   
-6. [Zero-Shot Video Captioning with Evolving Pseudo-Tokens (vedio captioning)](https://arxiv.org/abs/2207.11100)
+```arXiv 2023``` [[paper]](https://arxiv.org/abs/2303.13455)
 
-   *Yoad Tewel, Yoav Shalev, Roy Nadler, Idan Schwartz, Lior Wolf*
+### 2022
 
-   `arXiv preprint` [[code](https://github.com/YoadTew/zero-shot-video-to-text)]
-   
-   `pseudo-tokens`  `iterative generation`
-   
-## 2021
+- **[ZeroCap: Zero-Shot Image-to-Text Generation for Visual-Semantic Arithmetic](https://openaccess.thecvf.com/content/CVPR2022/html/Tewel_ZeroCap_Zero-Shot_Image-to-Text_Generation_for_Visual-Semantic_Arithmetic_CVPR_2022_paper.html)** [![Star](https://img.shields.io/github/stars/haotian-liu/LLaVA.svg?style=social&label=Star)](https://github.com/YoadTew/zero-shot-image-to-text)
 
-1. [Uni-Perceiver: Pre-training Unified Architecture for Generic Perception for Zero-shot and Few-shot Tasks](https://arxiv.org/abs/2112.01522)
+```CVPR 2022``` [[paper]](https://openaccess.thecvf.com/content/CVPR2022/html/Tewel_ZeroCap_Zero-Shot_Image-to-Text_Generation_for_Visual-Semantic_Arithmetic_CVPR_2022_paper.html) [[code]](https://github.com/YoadTew/zero-shot-image-to-text) [[demo]](https://replicate.com/yoadtew/zero-shot-image-to-text)
 
-   *Xizhou Zhu, Jinguo Zhu, Hao Li, Xiaoshi Wu, Xiaogang Wang, Hongsheng Li, Xiaohua Wang, Jifeng Dai*
+- **[Text-Only Training for Image Captioning using Noise-Injected CLIP](https://arxiv.org/abs/2211.00575)** [![Star](https://img.shields.io/github/stars/haotian-liu/LLaVA.svg?style=social&label=Star)](https://github.com/DavidHuji/CapDec)
 
-   `CVPR 2022`
-   
-   `unified model`  `modal-agnostic inputs`
-   
-2. [ZeroCap: Zero-Shot Image-to-Text Generation for Visual-Semantic Arithmetic](https://arxiv.org/abs/2111.14447)
+```EMNLP 2022``` [[paper]](https://arxiv.org/abs/2211.00575) [[code]](https://github.com/DavidHuji/CapDec)
 
-   *Yoad Tewel, Yoav Shalev, Idan Schwartz, Lior Wolf*
+- **[Visual Information Guided Zero-Shot Paraphrase Generation](https://arxiv.org/abs/2201.09107)**
 
-   `CVPR 2022` [[code](https://github.com/YoadTew/zero-shot-image-to-text)]
-   
-   `training-free`  `image-guided context cache adjusting during inference`
-   
-3. [Scaling Up Vision-Language Pre-training for Image Captioning](https://arxiv.org/abs/2111.12233)
+```COLING 2022``` [[paper]](https://arxiv.org/abs/2201.09107)
 
-   *Xiaowei Hu, Zhe Gan, Jianfeng Wang, Zhengyuan Yang, Zicheng Liu, Yumao Lu, Lijuan Wang*
+- **[Socratic Models: Composing Zero-Shot Multimodal Reasoning with Language](https://arxiv.org/abs/2204.00598)**
 
-   `arXiv preprint`
-   
-   `scaling up model`  `scaling up pre-training datasets`  `testing zero-shot performance`
-   
-4. [SimVLM: Simple Visual Language Model Pretraining with Weak Supervision](https://arxiv.org/abs/2108.10904)
+```arXiv 2022``` [[paper]](https://arxiv.org/abs/2204.00598) [[code]](hhttps://github.com/google-research/google-research/tree/master/socraticmodels) [[project page]](https://socraticmodels.github.io/#code)
 
-   *Zirui Wang, Jiahui Yu, Adams Wei Yu, Zihang Dai, Yulia Tsvetkov, Yuan Cao*
+- **[Large-Scale Bidirectional Training for Zero-Shot Image Captioning](https://arxiv.org/abs/2211.06774)**
 
-   `ICLR 2022`
-   
-   `weak supervision`  `pre-training end-to-end`  `testing zero-shot performance`
-   
-5. [VisualGPT: Data-efficient Adaptation of Pretrained Language Models for Image Captioning](https://arxiv.org/abs/2102.10407)
+```arXiv 2022``` [[paper]](https://arxiv.org/abs/2211.06774)
 
-   *Jun Chen, Han Guo, Kai Yi, Boyang Li, Mohamed Elhoseiny*
+### before 2022
 
-   `CVPR 2022` [[code](https://github.com/Vision-CAIR/VisualGPT)]
-   
-   `data-efficient`
+- **[Image Captioning with Unseen Objects](https://arxiv.org/abs/1908.00047)**
+
+```BMVC 2019``` [[paper]](https://arxiv.org/abs/1908.00047)
 
 
-# Unsupervised image Captioning
+## Video-to-Text Generation
 
-The key pretext task in unsupervised image captioning is how to generate aligned pseudo-caption for each image. Early works focus on leveraging visual concept to obtain relevant image captions. They usually retrieve relevant sentence containing visual concept directly from text corpus or train language model conditioned by visual concept from scratch (2018-1, 2019-2). There are at least two problems with this method. One is the mismatch between image and pseudo-caption as visual concept only containing entity will lead to ignore the abuse of verb, adjunct and etc.. Another is that image captioning model will overfit to training datasets of visual concept detector which will underperform the zero/few-shot performance of captioning model. Despite the use of visual concept, Honda etc. propose the generation of each word in sentence should consider the influence from image which alleviates the mismatch between image and pseudo-caption (see 2021-1). It sheds light on zero/few-shot decode metric (e.g., MAGIC). Another method leverages adversarial networks, training with scarce image-caption pairs, to retrieve pseudo-caption from text corpus, which gets rid of visual concept detector (2019-1).
+### 2023
 
-## 2021
+- **[Zero-Shot Dense Video Captioning by Jointly Optimizing Text and Momen](https://arxiv.org/abs/2307.02682)**
 
-1. [Removing Word-Level Spurious Alignment between Images and Pseudo-Captions in Unsupervised Image Captioning](https://arxiv.org/abs/2104.13872)
+```arXiv 2023``` [[paper]](https://arxiv.org/abs/2307.02682)
 
-   *Ukyo Honda, Yoshitaka Ushiku, Atsushi Hashimoto, Taro Watanabe, Yuji Matsumoto*
+### 2022
 
-   `EACL 2021`  [[code]( https://github.com/ukyh/RemovingSpuriousAlignment)]
-   
-   `word-level correspondence`
-   
-## 2019
+- **[Zero-Shot Video Captioning with Evolving Pseudo-Tokens](https://arxiv.org/abs/2207.11100)** [![Star](https://img.shields.io/github/stars/haotian-liu/LLaVA.svg?style=social&label=Star)](https://github.com/YoadTew/zero-shot-video-to-text)
 
-1. [Image Captioning with Very Scarce Supervised Data: Adversarial Semi-Supervised Learning Approach](https://arxiv.org/abs/1909.02201)
+```arXiv 2022``` [[paper]](https://arxiv.org/abs/2207.11100) [[code]](https://github.com/YoadTew/zero-shot-video-to-text)
 
-   *Dong-Jin Kim, Jinsoo Choi, Tae-Hyun Oh, In So Kweon*
+### Before 2022
 
-   `EMNLP 2019`
-   
-   `adversarial training`  `semi-supervised learning`
-   
-2. [Towards Unsupervised Image Captioning with Shared Multimodal Embeddings](https://arxiv.org/abs/1908.09317)
+- **[Learning to Compose Topic-Aware Mixture of Experts for Zero-Shot Video Captioning](https://ojs.aaai.org/index.php/AAAI/article/view/4926)**
 
-   *Iro Laina, Christian Rupprecht, Nassir Navab*
-
-   `ICCV 2019`
-   
-   `adversarial training`  `joint embedding space`
-   
-## 2018
-   
-1. [Unsupervised Image Captioning](https://arxiv.org/abs/1811.10787)
-
-   *Yang Feng, Lin Ma, Wei Liu, Jiebo Luo*
-
-   `CVPR 2019`
-   
-   `adversarial training`  `visual concept distillation`  `bi-directional reconstruction`
+```AAAI 2019``` [[paper]](https://ojs.aaai.org/index.php/AAAI/article/view/4926)
