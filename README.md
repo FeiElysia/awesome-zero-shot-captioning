@@ -22,13 +22,13 @@ A curated list of zero-shot captioning papers, including image-to-text generatio
 
 ```ACL 2023``` [[paper]](https://aclanthology.org/2023.acl-long.664/) [[code]](https://github.com/yangbang18/MultiCapCLIP)
 
-- **[Re-ViLM: Retrieval-Augmented Visual Language Model for Zero and Few-Shot Image Captioning](https://arxiv.org/abs/2302.04858)**
-
-```arXiv 2023``` [[paper]](https://arxiv.org/abs/2302.04858)
-
 - **[ZeroGen: Zero-shot Multimodal Controllable Text Generation with Multiple Oracles](https://arxiv.org/abs/2306.16649)** [![Star](https://img.shields.io/github/stars/ImKeTT/ZeroGen.svg?style=social&label=Star)](https://github.com/ImKeTT/ZeroGen)
 
 ```arXiv 2023``` [[paper]](https://arxiv.org/abs/2306.16649) [[code]](https://github.com/ImKeTT/ZeroGen)
+
+- **[Re-ViLM: Retrieval-Augmented Visual Language Model for Zero and Few-Shot Image Captioning](https://arxiv.org/abs/2302.04858)**
+
+```arXiv 2023``` [[paper]](https://arxiv.org/abs/2302.04858)
 
 - **[Test-Time Adaptation with CLIP Reward for Zero-Shot Generalization in Vision-Language Models](https://arxiv.org/abs/2305.18010)**
 
